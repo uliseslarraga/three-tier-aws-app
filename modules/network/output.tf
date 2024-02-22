@@ -1,5 +1,5 @@
 output "vpc_id" {
-  value = aws_vpc.vpc_ulr_test.id
+  value = aws_vpc.main_vpc.id
 }
 
 output "pub_subnet_cidr" {

@@ -5,4 +5,4 @@ The application is based on a three tier architecture, in the image above, the h
 ![Application Architecture](img/Three-tier-web-app.jpg)
 
 ## Network layer
-it's build with the classic components for an AWS app, starting with a VPC as the main container, with 2 public subnets to host the presentation layer, 4 private subnets to host busines and data layers.
+It's build with the classic components for an AWS app, starting with a VPC as the main container, 2 public subnets to host the presentation layer, 4 private subnets to host busines and data layers, an internet gateway as well as an Nat Gateway.

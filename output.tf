@@ -1,3 +1,7 @@
 output "network" {
-    value = module.newtwork
+    value = module.network
+}
+
+output "compute" {
+    value = module.compute
 }

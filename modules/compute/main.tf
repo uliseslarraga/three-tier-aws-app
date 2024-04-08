@@ -11,6 +11,9 @@ resource "aws_launch_template" "web_app_lt" {
     tags = merge({Name = "web-app-instance"}, var.tags)
   }
   user_data = filebase64("${path.module}/scripts/init.sh")
+  iam_instance_profile {
+    arn = aws_iam_instance_profile.ec2_profile.arn
+  }
 }
 
 resource "aws_autoscaling_group" "auto_scaling_group" {

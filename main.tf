@@ -9,6 +9,7 @@ module "compute"{
     source           = "./modules/compute"
     instance_type    = var.instance_type
     tags             = var.tags
+    environment      = var.environment
     vpc_id           = module.network.vpc_id
     private_subnets  = module.network.priv_subnet_ids
     public_subnets   = module.network.pub_subnet_ids
@@ -18,4 +19,10 @@ module "compute"{
     depends_on = [
         module.network
     ]
+}
+
+module "storage"{
+    source      = "./modules/storage"
+    environment = var.environment
+    tags        = var.tags
 }

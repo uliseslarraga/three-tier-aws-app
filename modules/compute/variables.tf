@@ -18,6 +18,11 @@ data "aws_ami" "web_app_image" {
   }
 }
 
+variable "environment" {
+  type        = string
+  description = "Env name"
+}
+
 variable "vpc_id" {
   type        = string
   description = "VPC id from Network module"
